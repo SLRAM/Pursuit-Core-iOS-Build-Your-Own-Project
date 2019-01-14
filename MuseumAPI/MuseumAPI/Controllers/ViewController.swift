@@ -11,6 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    private var object: ObjectData!{
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+
     private var objectIDs = [Int]() {
         didSet {
             DispatchQueue.main.async {
@@ -22,8 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         searchBar.delegate = self
-        //searchEvents(keyword: "1")
-        searchBar.autocapitalizationType = .none
+//        searchBar.autocapitalizationType = .none
         fetchIds()
     }
     private func fetchIds() {
@@ -50,24 +57,28 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ObjectCell", for: indexPath)
         let object = objectIDs[indexPath.row]
-        cell.textLabel?.text = String(object)
+        cell.textLabel?.text = "Object ID: \(object)"
         
 
         return cell
     }
 }
 extension ViewController: UISearchBarDelegate {
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchBar.resignFirstResponder() // dismiss the keyboard
-//        guard let searchText = searchBar.text,
-//            !searchText.isEmpty,
-//            let searchTextEncoded = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-//                return
-//        }
-//        searchEvents(keyword: searchTextEncoded)
-//    }
-    //POST https://5c2d2438b8051f0014cd475a.mockapi.io/api/v1/favorites
-    
-    //GET https://5c2d2438b8051f0014cd475a.mockapi.io/api/v1/favorites
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchTerm = searchBar.text {
+            if let searchTermInt = Int(searchTerm) {
+                MuseumAPIClient.searchEvents(keyword: searchTermInt) { (appError, object) in
+                    if let appError = appError {
+                        print(appError)
+                    }
+                    if let object = object {
+                        self.object = object
+                    }
+                }
+            }
+        }
+        searchBar.resignFirstResponder()
+
+    }
 }
 

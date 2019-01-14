@@ -19,6 +19,9 @@
 		9784C68121D6F62B0096A995 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784C68021D6F62B0096A995 /* AppError.swift */; };
 		9784C68321D722710096A995 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784C68221D722710096A995 /* NetworkHelper.swift */; };
 		9784C6A921DD71050096A995 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784C6A821DD71050096A995 /* ImageHelper.swift */; };
+		97E8D7D321E2F4C600C10B51 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E8D7D221E2F4C600C10B51 /* Favorite.swift */; };
+		97E8D7D521E2F85D00C10B51 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E8D7D421E2F85D00C10B51 /* FavoritesViewController.swift */; };
+		97E8D7D721E2F9F400C10B51 /* FavoritesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E8D7D621E2F9F400C10B51 /* FavoritesDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9784C68021D6F62B0096A995 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9784C68221D722710096A995 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		9784C6A821DD71050096A995 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		97E8D7D221E2F4C600C10B51 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		97E8D7D421E2F85D00C10B51 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		97E8D7D621E2F9F400C10B51 /* FavoritesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 			children = (
 				9784C66321D6DE850096A995 /* ViewController.swift */,
 				9784C67A21D6ECB10096A995 /* DetailViewController.swift */,
+				97E8D7D421E2F85D00C10B51 /* FavoritesViewController.swift */,
+				97E8D7D621E2F9F400C10B51 /* FavoritesDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 			children = (
 				9784C67821D6E0330096A995 /* ObjectInfo.swift */,
 				9784C67C21D6F4CB0096A995 /* ObjectIDs.swift */,
+				97E8D7D221E2F4C600C10B51 /* Favorite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,10 +210,13 @@
 				9784C6A921DD71050096A995 /* ImageHelper.swift in Sources */,
 				9784C67F21D6F5EA0096A995 /* MuseumAPIClient.swift in Sources */,
 				9784C66421D6DE850096A995 /* ViewController.swift in Sources */,
+				97E8D7D321E2F4C600C10B51 /* Favorite.swift in Sources */,
+				97E8D7D521E2F85D00C10B51 /* FavoritesViewController.swift in Sources */,
 				9784C66221D6DE850096A995 /* AppDelegate.swift in Sources */,
 				9784C67B21D6ECB10096A995 /* DetailViewController.swift in Sources */,
 				9784C67D21D6F4CB0096A995 /* ObjectIDs.swift in Sources */,
 				9784C68121D6F62B0096A995 /* AppError.swift in Sources */,
+				97E8D7D721E2F9F400C10B51 /* FavoritesDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
