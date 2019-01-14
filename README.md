@@ -78,7 +78,7 @@ Own and build your own iOS app.
 [Pritesh]()  
 [Ramu]()  
 [Raymond]()  
-[Stephanie]()  
+[Stephanie](https://github.com/SLRAM/Pursuit-Core-iOS-Build-Your-Own-Project)  
 [Tingxin]()  
 [Yaz]()  
   
